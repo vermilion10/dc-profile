@@ -6,10 +6,16 @@ This project is fully responsive and supports dynamic configuration for avatars 
 ## Features
 
 - **Discord-like dark theme styling.**
-- **Glassmorphism Iframe Mode**: If embedded via iframe, the app automatically converts the background into a translucent iOS-like frost blur for an impressive overlay effect.
 - **Dynamic Action Button**: The "Message" button triggers a predefined `mailto:` link.
 - **FontAwesome Support**: Instantly utilizes FontAwesome Brand icons for any social media connections added.
 - **Single Source of Truth config**: Add your unique data in a single easily editable file!
+
+<details>
+  <summary>Click to expand for more details</summary>
+
+**Glassmorphism Iframe Mode (WIP)**: If embedded via iframe, the app automatically converts the background into a translucent frost blur for an impressive overlay effect.
+</details>
+ 
 
 ## Customization
 
@@ -27,6 +33,9 @@ export const profileConfig: ProfileData = {
 };
 ```
 
+<details>
+  <summary>Glassmorphism Iframe Mode (WIP)</summary>
+  
 **Example of a Transparent Embed (Standard)**
 By default, when viewed via an iframe, the design will use the Glassmorphism effect.
 ```html
@@ -38,6 +47,8 @@ Use this parameter in the *query limit* if you do not want the transparent mode 
 ```html
 <iframe src="https://vermilion10.github.io/dc-profile/?glass=false" width="500" height="700" style="border: none; border-radius: 12px;"></iframe>
 ```
+</details>
+
 
 
 
