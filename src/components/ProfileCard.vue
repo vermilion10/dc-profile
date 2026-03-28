@@ -2,7 +2,8 @@
 import type { ProfileData } from '../config';
 
 const props = defineProps<{
-  profile: ProfileData
+  profile: ProfileData;
+  isIframe?: boolean;
 }>();
 
 const isVideo = (url: string) => /\.(mp4|webm|ogg)$/i.test(url);
@@ -13,7 +14,10 @@ const sendEmail = () => {
 </script>
 
 <template>
-  <div class="w-[440px] max-w-full bg-[#232428] rounded-2xl overflow-hidden shadow-2xl relative flex flex-col border border-[#1e1f22] mx-auto transition-all duration-300">
+  <div 
+    class="w-[440px] max-w-full rounded-2xl overflow-hidden shadow-2xl relative flex flex-col mx-auto transition-all duration-300 border"
+    :class="[isIframe ? 'bg-[#232428]/60 backdrop-blur-2xl border-white/10' : 'bg-[#232428] border-[#1e1f22]']"
+  >
     
     <div class="w-full aspect-[24/9] md:aspect-[23/9] relative bg-gray-800 shrink-0 overflow-hidden">
       <video v-if="isVideo(profile.banner)" 
