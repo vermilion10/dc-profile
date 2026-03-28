@@ -34,7 +34,7 @@ const sendEmail = () => {
     <div class="px-4 pb-4 md:px-5 md:pb-5 w-full max-w-full">
       
       <div class="relative -mt-[60px] md:-mt-[66px] mb-3 w-fit">
-        <div class="rounded-full border-[5px] md:border-[6px] border-[#232428] bg-[#232428]">
+        <div :class="['rounded-full border-[5px] md:border-[6px]', isIframe ? 'border-white/20 bg-white/10 backdrop-blur-md' : 'border-[#232428] bg-[#232428]']">
           <video v-if="isVideo(profile.avatar)" 
                  :src="profile.avatar" 
                  class="w-[100px] h-[100px] md:w-[112px] md:h-[112px] rounded-full object-cover" 
